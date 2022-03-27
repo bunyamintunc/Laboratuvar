@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  th:replace="fragments :: html_head" />
+<body class="d-flex flex-column min-vh-100">
+<div class="container">
+
+    <div th:replace="fragments :: menu"></div>
+
+    <div th:switch="${reports}">
+        <h2 th:case="null">
+            <div class="jumbotron jumbotron-fluid  bg-secondary text-white mt-4">
+                <div class="container">
+                    <h1 class="display-4">LAB0RATUVAR</h1>
+
+                    <p >Laboratuvara hoşgeldin. Raporları görmek için Laboratuvar sekmesine tıkla ! </p>
+                    <hr>
+                    <p class="lead">What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                        passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum./p>
+
+                </div>
+            </div>
+        </h2>
+        <div class="m-3" th:case="*">
+            <div class="row">
+                <div th:each="report:${reports}" class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top"  th:src="${report.imgUrl}" src="" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="text-center"><span th:text="${report.patient.name}"></span> <span th:text="${report.patient.surname}"></span></h4>
+                        <hr>
+                        <h6 >Hastalık: <span class="text-center lead" th:text="${report.illnesTitle}"></span></h6>
+                        <h6 >Laborant: <span class="text-center lead" th:text="${report.laborant.name}"></span> <span class="lead" th:text="${report.laborant.surname}"></span></h6>
+                        <h6 >Laborant numarası: <span class="text-center lead" th:text="${report.laborant.hospitalNumber}"></span></h6>
+                        <h6 >Tarih: <span class="text-center lead" th:text="${report.date}"></span></h6>
+                        <hr>
+                        <h4 class="text-center">Rapor Numarası</h4>
+                        <h7 class="card-title text-justify lead" th:text="${report.number}"></h7>
+                        <div class="buton">
+                            <a th:href="@{/report/update/{id}(id=${report.id})}" class="btn btn-info col-md-6 "  role="button" >Update</a>
+                            <a th:href="@{/report/delete/{reportId}(reportId=${report.id})}" class="btn btn-danger col-md-4 m-3" role="button" >Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div  th:replace="fragments :: footer"></div>
+
+</div>
+
+
+
+</body>
+</html>

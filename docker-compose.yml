@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+
+  postgresqldb:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=54r0x111
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=Laba
+    ports:
+      - "5433:5433"
+    expose:
+      - 5433
+    command: -p 5433
+    networks:
+      - backend
+
+  app:
+    container_name: myapp
+    image: myimage
+    build: ./
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    depends_on:
+      - postgresqldb
+    networks:
+      - backend
+
+networks:
+  backend:

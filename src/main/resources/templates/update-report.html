@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments :: html_head" />
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu"></div>
+    <div class="form">
+        <form
+
+              th:action="@{/report/update/{id}(id=${reportDto.id})}"
+              th:object="${reportDto}"
+              method="post">
+            <p class="h1 text-center bg-warning text-dark">UPDATE REPORT</p>
+            <div class="form-group">
+                <label for="illnesTitle">İllnes Title</label>
+                <input th:field="*{illnesTitle}" type="text" class="form-control" id="illnesTitle" placeholder="Enter illnes title">
+            </div>
+            <div class="form-group">
+                <label for="illnesDescription">İlnes Description</label>
+                <textarea th:field="*{illnesDescription}" class="form-control" id="illnesDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Report Date</label>
+                <input th:field="*{date}" type="text" class="form-control" id="date" placeholder="Enter Date">
+            </div>
+            <div class="form-group">
+                <label for="imgUrl">İmage Url</label>
+                <input th:field="*{imgUrl}" type="text" class="form-control" id="imgUrl" placeholder="Enter İmage Url">
+            </div>
+            <div class="form-group">
+                <label for="laborantId">Laborant Number</label>
+                <input th:field="*{laborantId}" type="number" class="form-control" id="laborantId" placeholder="Enter laborant number">
+            </div>
+            <div class="form-group">
+                <label for="patientId">Patient Number</label>
+                <input th:field="*{patientId}"   type="number" readonly class="form-control disable" id="patientId" placeholder="Enter patient number">
+            </div>
+            <button type="submit" class="btn btn-primary m-2">Update Report</button>
+        </form>
+    </div>
+
+    <div th:replace="fragments :: footer"></div>
+</div>
+
+
+
+</body>
+</html>

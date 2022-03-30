@@ -33,7 +33,7 @@ kullanıcı adını ve şifremizi  admin olarak girelim. Kullanıcı adı ve şi
   * Laboratuvar görevlisi eklememizi sağlar
 - Add Report 
   * Raport eklememiz sağlar
--Seacrh
+- Seacrh
   *İnput olarak girdiğimiz hasta adı, laborat adı, laborant id  ve hasta id'sine göre arama yapmamızı sağlar. 
   
 ******************************************

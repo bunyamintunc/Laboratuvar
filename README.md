@@ -1,5 +1,5 @@
 # Labaratuvar 
-Hasta laborat ve rapor ekleyip bu raport üzerinde ekleme silme ve güncelleme işmlemlerini gerçekleştirdiğimiz temel düzeyde bir web uygulasıdr `spring boot` web uygulmasıdır.
+Hasta laborat ve rapor ekleyip bu raport üzerinde ekleme silme ve güncelleme işmlemlerini gerçekleştirdiğimiz temel düzeyde bir  `spring boot` web uygulmasıdır.
 
 
 ## İndirip Çalıştırma

@@ -31,6 +31,7 @@ kullanıcı adını ve şifremizi  admin olarak girelim. Kullanıcı adı ve şi
   * Hasta eklememizi sağlar
 - Add Laborant
   * Laboratuvar görevlisi eklememizi sağlar
+  
 -Add Report 
   * Raport eklememiz sağlar
 -Seacrh

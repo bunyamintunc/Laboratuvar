@@ -34,7 +34,7 @@ kullanıcı adını ve şifremizi  admin olarak girelim. Kullanıcı adı ve şi
 - Add Report 
   * Raport eklememiz sağlar
 - Seacrh
-  *İnput olarak girdiğimiz hasta adı, laborat adı, laborant id  ve hasta id'sine göre arama yapmamızı sağlar. 
+  * İnput olarak girdiğimiz hasta adı, laborat adı, laborant id  ve hasta id'sine göre arama yapmamızı sağlar. 
   
 ******************************************
   
